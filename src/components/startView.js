@@ -5,8 +5,18 @@ import { Form } from "react-bootstrap";
 export default class StartView extends Component {
   render() {
     return (
-      <div>
-        <Form.Control type="email" placeholder="Enter email" />
+      <>
+      <div className="mainTopWrap">
+        <div className="leftOpenCloseDiv">
+          <div className="modalClose">-</div>
+           <div className="caListLeft">
+             <li>Company</li>
+             <li>Person</li>
+           </div>
+        </div>
+        <div className="rightUnExpBox">
+       <h1 className="mainHeading">Accounts</h1>
+        <Form.Control type="email" placeholder="Enter Search Text"  className="searchTop" />
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -36,7 +46,9 @@ export default class StartView extends Component {
             </tr>
           </tbody>
         </Table>
-      </div>
+        </div>
+        </div>
+      </>
     );
   }
 }
