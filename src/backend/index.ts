@@ -15,12 +15,12 @@ export default class AccountRepository {
     }
 
     async getAllAccounts() : Promise<Account[]> {
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         return  dummyData.items;
     }
 
     async getAccountSummary(id: number) : Promise<Account > {
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         const account =  dummyData.items.find((item)=> item.id === id );
         if(account){
             return account;
