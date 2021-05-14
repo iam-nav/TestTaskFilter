@@ -1,13 +1,15 @@
-import AccountType  from "./account_type"
+import AccountType from "./account_type";
+import Company from "./company";
+import Person from "./person";
 
-// export default interface Person {
-// code | True | string
-// id | True | int
-// is | Text | string | Fixed "Account"
-// is_buyer | True | bool
-// is_organisor | True | bool
-// is_reseller | True | bool
-// is_supplier | True | bool
-// type | True | accounttype(no array)
-// type_detail   | True | Company(no array) or Person(no array)
-// }
+export default interface Account {
+  code?: string;
+  id?: number;
+  is: string;
+  is_buyer?: boolean;
+  is_organisor?: boolean;
+  is_reseller?: boolean;
+  is_supplier?: boolean;
+  type?: AccountType;
+  type_detail?: Company | Person;
+}

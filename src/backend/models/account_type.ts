@@ -1,5 +1,5 @@
 export default interface AccountType {
-  id: string;
+  id?: number;
   is: string;
-  name: string;
+  name?: string;
 }
